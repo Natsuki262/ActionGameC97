@@ -20,8 +20,8 @@ public class Move : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        float x = Input.GetAxis("Horizontal") * Speed;
-        float z = Input.GetAxis("Vertical") * Speed;
+        float x = Input.GetAxis("Horizontal") * Speed*Time.deltaTime;
+        float z = Input.GetAxis("Vertical") * Speed*Time.deltaTime;
         rb.AddForce(x, 0, z);
     }
 }
