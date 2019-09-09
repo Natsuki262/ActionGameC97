@@ -407,8 +407,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 17.154001, y: 0.81100005, z: 2.2120001}
-<<<<<<< HEAD
-=======
 --- !u!1001 &1578351927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -523,7 +521,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1630285465}
   Speed: 1000
->>>>>>> Create＿Player_Turn
 --- !u!1001 &560105917971517514
 PrefabInstance:
   m_ObjectHideFlags: 0
