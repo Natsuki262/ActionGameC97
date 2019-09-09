@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerForowCamera : MonoBehaviour
 {
+    [SerializeField]
+    private Transform Player;
+
     // Start is called before the first frame update
     void Start()
     {
