@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     int m_hp = 10;
 
+    public GameObject m_popItem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +17,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetButton("Fire2"))
         {
             Damage(3);
         }
@@ -26,6 +28,8 @@ public class Enemy : MonoBehaviour
         m_hp -= damage;
         if(m_hp <= 0)
         {
+            GameObject gameObj = Instantiate(m_popItem);
+            gameObj.transform.position = transform.position;
             Destroy(gameObject);
         }
     }
