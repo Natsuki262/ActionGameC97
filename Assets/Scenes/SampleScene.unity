@@ -615,9 +615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156baa637c383054d87d93955076b431, type: 3}
-=======
   JunpSpeed: 50
->>>>>>> Player_Junp
 --- !u!1001 &560105917971517514
 PrefabInstance:
   m_ObjectHideFlags: 0
