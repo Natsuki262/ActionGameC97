@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public Rigidbody rb;
+    private Rigidbody rb;
     [SerializeField]
     private float Speed;
     private float x;//x方向のInput値
@@ -26,42 +26,42 @@ public class Move : MonoBehaviour
     void Update()
     {
 
-    }   
+    }
     private void FixedUpdate()
     {
-         x = Input.GetAxis("Horizontal") * Speed;
-         z = Input.GetAxis("Vertical") * Speed;
+        x = Input.GetAxis("Horizontal") * Speed;
+        z = Input.GetAxis("Vertical") * Speed;
         rb.AddForce(x, y, z);
-        //rb.velocity = Vector3.zero;
+        rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         Vector3 diff = transform.position - Player_pos;
 
-        if(diff.magnitude>0.01f)//回転処理
+        /*if (diff.magnitude > 0.01f)//回転処理
         {
             transform.rotation = Quaternion.LookRotation(diff);
-        }
+        }*/
         Player_pos = transform.position;
 
-        //if (Ground)
-        //{
-            if (Input.GetKey(KeyCode.Space))
-            {
-                Debug.Log("エレガント");
-                rb.AddForce(Vector3.up *JunpSpeed );
-                Ground = false;
-            }
-       // }
-        void OnTrigger(Collider col)
+        Ray ray = new Ray(transform.position, Vector3.down);
         {
-            if (col.gameObject.tag == "Ground")
+            //接地判定
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 3.0f))//Rayの大きさ
             {
-                if (!Ground)
+               // Debug.DrawRay(transform.position, Vector3.down , Color.green);
+                //Debug.DrawRay(transform.position, Vector3.down);
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    Ground = true;
+                    Debug.Log("エレガント");
+                    rb.AddForce(transform.up * JunpSpeed);
+                    //Ground = false;
+
                 }
             }
         }
-
-        
     }
 }
+
+
+
+
