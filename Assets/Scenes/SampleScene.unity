@@ -422,6 +422,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1630285467}
   rotSpeed: 0.7
+--- !u!1 &1008342629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5011509331588710867, guid: b12cc523001d81a4bab60b7a4ff4b762,
+    type: 3}
+  m_PrefabInstance: {fileID: 4201798374849241475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1008342632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008342629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c550e473bde360438582fe3f68decd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1578351927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -695,7 +713,7 @@ PrefabInstance:
     - target: {fileID: 5011509331588710867, guid: b12cc523001d81a4bab60b7a4ff4b762,
         type: 3}
       propertyPath: m_Name
-      value: Timer
+      value: Scene
       objectReference: {fileID: 0}
     - target: {fileID: 2536404552554003927, guid: b12cc523001d81a4bab60b7a4ff4b762,
         type: 3}
@@ -751,6 +769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201798374849241477, guid: b12cc523001d81a4bab60b7a4ff4b762,
+        type: 3}
+      propertyPath: m_timer
+      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b12cc523001d81a4bab60b7a4ff4b762, type: 3}
