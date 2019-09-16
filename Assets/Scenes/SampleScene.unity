@@ -540,6 +540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1630285465}
   Speed: 1000
+  JunpSpeed: 0
 --- !u!4 &1630285467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee,
@@ -615,7 +616,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 156baa637c383054d87d93955076b431, type: 3}
-  JunpSpeed: 50
 --- !u!1001 &560105917971517514
 PrefabInstance:
   m_ObjectHideFlags: 0
