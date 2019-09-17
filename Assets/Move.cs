@@ -46,7 +46,7 @@ public class Move : MonoBehaviour
         {
             //接地判定
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 0.1f))//Rayの大きさ
+            if (Physics.Raycast(ray, out hit, 0.5f))//Rayの大きさ
             {
                 // Debug.DrawRay(transform.position, Vector3.down , Color.green);
                 //Debug.DrawRay(transform.position, Vector3.down);
@@ -56,21 +56,21 @@ public class Move : MonoBehaviour
             {
                 //Debug.Log("エレガント");
                 rb.AddForce(transform.up * JunpSpeed);
-                //Debug.Log(JunpSpeed);
+                Debug.Log(JunpSpeed);
             }
         
             }
 
         }
     }
-    void OnCollsionEnter(Collision collision)
+   /* void OnCollsionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             Debug.Log("Hit");
             Debug.Log(collision.gameObject.name);
         }
-    }
+    }*/
 }
 
 
