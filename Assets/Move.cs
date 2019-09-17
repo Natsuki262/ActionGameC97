@@ -13,7 +13,7 @@ public class Move : MonoBehaviour
     private Vector3 Player_pos;
     bool Ground = true;
     [SerializeField]
-    float JunpSpeed;
+    private float JunpSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +32,8 @@ public class Move : MonoBehaviour
         x = Input.GetAxis("Horizontal") * Speed;
         z = Input.GetAxis("Vertical") * Speed;
         rb.AddForce(x, y, z);
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        //rb.velocity = Vector3.zero;
+        //rb.angularVelocity = Vector3.zero;
         Vector3 diff = transform.position - Player_pos;
 
         /*if (diff.magnitude > 0.01f)//回転処理
@@ -46,18 +46,29 @@ public class Move : MonoBehaviour
         {
             //接地判定
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 3.0f))//Rayの大きさ
+            if (Physics.Raycast(ray, out hit, 0.1f))//Rayの大きさ
             {
-               // Debug.DrawRay(transform.position, Vector3.down , Color.green);
+                // Debug.DrawRay(transform.position, Vector3.down , Color.green);
                 //Debug.DrawRay(transform.position, Vector3.down);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    Debug.Log("エレガント");
-                    rb.AddForce(transform.up * JunpSpeed);
-                    //Ground = false;
-
-                }
+                Debug.Log(hit.collider);
+              
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                //Debug.Log("エレガント");
+                rb.AddForce(transform.up * JunpSpeed);
+                //Debug.Log(JunpSpeed);
             }
+        
+            }
+
+        }
+    }
+    void OnCollsionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Debug.Log("Hit");
+            Debug.Log(collision.gameObject.name);
         }
     }
 }
