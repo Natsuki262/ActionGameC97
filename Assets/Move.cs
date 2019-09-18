@@ -31,15 +31,19 @@ public class Move : MonoBehaviour
     {
         x = Input.GetAxis("Horizontal") * Speed;
         z = Input.GetAxis("Vertical") * Speed;
-        rb.AddForce(x, y, z);
+        rb.AddForce(x, 0, z);
         //rb.velocity = Vector3.zero;
         //rb.angularVelocity = Vector3.zero;
-        Vector3 diff = transform.position - Player_pos;
 
-        /*if (diff.magnitude > 0.01f)//回転処理
+        /*Vector3 diff = transform.position - Player_pos;
+        Player_pos = transform.position;
+
+        if (diff.magnitude > 0.01f)//回転処理
         {
             transform.rotation = Quaternion.LookRotation(diff);
         }*/
+        
+
         Player_pos = transform.position;
 
         Ray ray = new Ray(transform.position, Vector3.down);
