@@ -21,9 +21,9 @@ public class Item : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider col)
     {
-        if(collision.transform.tag == "Player")
+        if(col.transform.tag == "Player")
         {
             UseItem();
             Destroy(gameObject);

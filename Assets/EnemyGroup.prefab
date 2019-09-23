@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 340268484672728746, guid: 476b6eecb1444c54794b1ca0fd3ba60f, type: 3}
-  enemyCount: 2
+  enemyCount: 1
   enemySpawnInterval: 4
