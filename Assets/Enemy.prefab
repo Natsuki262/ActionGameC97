@@ -61,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340268484672728746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.872713, y: -4.748226, z: -7.784214}
+  m_LocalPosition: {x: -4.3233147, y: 9.556905, z: 9.131739}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8000863272528020415}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_speed: 1
   m_attackCollider: {fileID: 6606488354365508080}
   m_battleBorder: 5
-  m_attackIntervalTimer: 0
+  m_attackIntervalTimer: 3
 --- !u!136 &5294815970615370971
 CapsuleCollider:
   m_ObjectHideFlags: 0

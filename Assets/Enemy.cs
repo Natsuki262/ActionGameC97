@@ -49,7 +49,6 @@ public class Enemy : MonoBehaviour
                 Move();
                 break;
         }
-        Debug.Log(m_state);
 
         Vector3 direction = player.transform.position - transform.position;
         direction.y = 0.0f;
