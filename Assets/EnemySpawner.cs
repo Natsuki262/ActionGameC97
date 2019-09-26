@@ -24,16 +24,16 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(enemySpawnInterval);
             if (transform.childCount == 0)
             {
-                yield return new WaitForSeconds(enemySpawnInterval);
                 for (int i = 0; i < enemyCount; i++)
                 {
                     Instantiate(enemy, transform);
                     float range = 10.0f;
                     Vector3 position = new Vector3();
                     position.x = Random.Range(-range, range);
-                    position.y = Random.Range(-range, range);
+                    position.y = Random.Range(0.0f, range);
                     position.z = Random.Range(-range, range);
                     enemy.transform.position = position;
                 }
